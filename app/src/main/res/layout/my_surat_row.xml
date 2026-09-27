@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        android:layout_margin="6dp"
+        app:cardBackgroundColor="@color/cardBackgroundColor"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/arabsq"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:text="1"
+                    android:background="@drawable/bg_ayah_num"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="@dimen/_17sdp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/Surat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/uthmanic_hafs1b_ver13"
+                        android:text="سُورَةُ الفَاتِحَةِ"
+                        android:gravity="end"
+                        android:layout_gravity="end"
+                        android:textColor="@color/textColorBlack"
+                        android:textSize="@dimen/_25sdp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="end"
+                        android:gravity="end"
+                        >
+                        <TextView
+                            android:id="@+id/mInfo2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rabar014"
+                            android:text="جوزئ "
+                            android:textColor="@color/textColorBlack"
+                            android:textSize="@dimen/_12sdp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@color/textColorBlack"
+                            android:layout_gravity="center"/>
+
+
+                        <TextView
+                            android:id="@+id/mInfo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rabar014"
+                            android:text="ژمارە"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="@color/textColorBlack"
+                            android:textSize="@dimen/_12sdp"
+                            tools:ignore="TextSizeCheck" />
+                        <TextView
+                            android:id="@+id/mInfo3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rabar014"
+                            android:text="ئایەت"
+                            android:textColor="@color/textColorBlack"
+                            android:textSize="@dimen/_12sdp"
+                            tools:ignore="TextSizeCheck" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="10dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginStart="5dp"
+                            android:background="@color/textColorBlack"
+                            android:layout_gravity="center"/>
+
+                        <TextView
+                            android:id="@+id/mInfo4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rabar014"
+                            android:text="شوێن"
+                            android:textColor="@color/textColorBlack"
+                            android:textSize="@dimen/_12sdp"
+                            tools:ignore="TextSizeCheck" />
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

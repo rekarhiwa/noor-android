@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/backgrund_image"
+    tools:context=".activities.Wallamakan_search"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            tools:ignore="ContentDescription"
+            android:layout_gravity="center"
+            />
+
+        <EditText
+            android:id="@+id/WallamakanSearchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:autofillHints=""
+            android:background="@drawable/search_backgroung"
+            android:drawableEnd="@drawable/search"
+            android:drawablePadding="@dimen/_7sdp"
+            android:paddingEnd="@dimen/_15sdp"
+            android:fontFamily="@font/rabar014"
+            android:hint="گەڕان بکە"
+            android:inputType="text"
+            android:outlineAmbientShadowColor="@color/black"
+            android:outlineSpotShadowColor="@color/colorOrang"
+            android:textAlignment="textStart"
+            android:textColor="@color/textColorBlack"
+            android:textColorHint="@color/textColorHintSelected"
+            android:textSize="@dimen/_14sdp"
+            tools:ignore="HardcodedText,RtlSymmetry,TouchTargetSizeCheck"
+            tools:targetApi="p" />
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:id="@+id/wallamakanSearchRecyclerView"/>
+
+</LinearLayout>

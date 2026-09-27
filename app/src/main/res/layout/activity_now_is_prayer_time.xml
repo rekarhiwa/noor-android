@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/prayerTimeRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_prayer_fajr"
+    android:keepScreenOn="true"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.NowIsPrayerTimeActivity">
+
+
+    <!-- Main content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="28dp">
+
+
+        <!-- Top label -->
+        <TextView
+            android:id="@+id/tvPrayer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rabar015"
+            android:text="ئێستا کاتی بانگە"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textAlignment="center" />
+
+
+        <!-- Prayer icon -->
+        <ImageView
+            android:id="@+id/ivPrayerIcon"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginTop="45dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/sunset1"
+            android:contentDescription="@null"
+            app:tint="@color/white" />
+
+
+        <!-- Prayer name -->
+        <TextView
+            android:id="@+id/tvPrayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/rabar015"
+            android:text="بەیانی"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textAlignment="center" />
+
+
+        <!-- Prayer time -->
+        <TextView
+            android:id="@+id/tvPrayerTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/rabar015"
+            android:text="05:15"
+            android:textColor="@color/white"
+            android:textSize="42sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textAlignment="center" />
+
+
+        <!-- Next prayer information -->
+        <TextView
+            android:id="@+id/tvNextPrayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/rabar014"
+            android:text="بانگی دواتر لە 12:15 نیوەڕۆ دەبێت"
+            android:textColor="#EFFFFFFF"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:maxLines="2" />
+
+
+        <!-- Bottom button -->
+        <TextView
+            android:id="@+id/closeIv"
+            android:layout_width="110dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/bg_prayer_button"
+            android:fontFamily="@font/rabar014"
+            android:gravity="center"
+            android:text="جزاک الله"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:elevation="8dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

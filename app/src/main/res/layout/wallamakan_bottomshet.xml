@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/design_wallamakan_sheet"
+    android:orientation="vertical"
+    android:background="@drawable/bottomshet_back"
+    >
+
+    <View
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_3sdp"
+        android:layout_gravity="center|top"
+        android:background="@drawable/view_background"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_5sdp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_2sdp"
+            android:orientation="vertical"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCopy"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_copy"
+                android:layout_margin="5dp"
+                android:layout_gravity="end"
+                />
+
+            <TextView
+                android:id="@+id/tvWallam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:layout_marginEnd="@dimen/_2sdp"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:fontFamily="@font/rabar015"
+                android:text=" ئایەت عەرەبی"
+                android:layout_gravity="center"
+                android:textColor="@color/textColorBlack"
+                android:textSize="@dimen/_18sdp"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

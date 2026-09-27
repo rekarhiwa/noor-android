@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Page Container -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter" />
+
+        <!-- 🔥 Shadow Overlay
+        <View
+            android:id="@+id/pageShadow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/page_shadow"/>
+            -->
+
+    </FrameLayout>
+
+    <!-- Page Number -->
+    <TextView
+        android:id="@+id/txtPageNumber"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_gravity="center"
+        android:fontFamily="@font/rabar014"
+        android:text="666"
+        android:textColor="@color/textColorBlack"
+        android:gravity="center"
+        android:textSize="18sp" />
+
+</LinearLayout>

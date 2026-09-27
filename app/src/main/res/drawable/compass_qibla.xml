@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="300dp"
+    android:viewportWidth="300"
+    android:viewportHeight="300">
+
+  <!-- ====================================== -->
+  <!-- SOFT NEEDLE SHADOW                     -->
+  <!-- ====================================== -->
+
+  <path
+      android:pathData="
+          M150,150
+          L137,93
+          L150,65
+          L163,93
+          Z"
+      android:fillColor="#18000000" />
+
+
+  <!-- ====================================== -->
+  <!-- GOLD UPPER ARROW                       -->
+  <!-- ====================================== -->
+
+  <path
+      android:pathData="
+          M150,150
+          L137,93
+          L150,65
+          L163,93
+          Z"
+      android:fillColor="#B88938" />
+
+  <!-- Gold highlight -->
+  <path
+      android:pathData="
+          M150,150
+          L150,65
+          L163,93
+          Z"
+      android:fillColor="#C99B43" />
+  <!-- ====================================== -->
+  <!-- GREEN LOWER ARROW                      -->
+  <!-- ====================================== -->
+
+  <path
+      android:pathData="
+          M150,150
+          L163,207
+          L150,235
+          L137,207
+          Z"
+      android:fillColor="#31564C" />
+
+  <!-- Green highlight -->
+  <path
+      android:pathData="
+          M150,150
+          L150,235
+          L137,207
+          Z"
+      android:fillColor="#49685E" />
+
+  <!-- ====================================== -->
+  <!-- CENTER CIRCLE                          -->
+  <!-- ====================================== -->
+
+  <path
+      android:pathData="
+            M150,137
+            A13,13 0,1 0,150,163
+            A13,13 0,1 0,150,137"
+      android:fillColor="#F7F5E8"
+      android:strokeColor="#718079"
+      android:strokeWidth="2" />
+
+  <path
+      android:pathData="
+            M150,143
+            A7,7 0,1 0,150,157
+            A7,7 0,1 0,150,143"
+      android:fillColor="#B88938" />
+
+
+  <!-- ====================================== -->
+  <!-- SMALL KAABA OUTER CIRCLE              -->
+  <!-- ====================================== -->
+
+  <path
+      android:pathData="
+          M150,12
+          A20,20 0,1 0,150,52
+          A20,20 0,1 0,150,12"
+      android:fillColor="#F7F5E8"
+      android:strokeColor="#B28A3E"
+      android:strokeWidth="2.5" />
+
+
+  <!-- ====================================== -->
+  <!-- SMALL KAABA                            -->
+  <!-- ====================================== -->
+
+  <!-- Kaaba body -->
+  <path
+      android:pathData="
+          M140,25
+          L160,25
+          L160,40
+          L140,40
+          Z"
+      android:fillColor="#243F38" />
+
+  <!-- Kaaba top -->
+  <path
+      android:pathData="
+          M140,25
+          L150,20
+          L160,25
+          L150,30
+          Z"
+      android:fillColor="#31564A" />
+
+  <!-- Gold band -->
+  <path
+      android:pathData="
+          M140,29
+          L160,29
+          L160,32
+          L140,32
+          Z"
+      android:fillColor="#D1AA55" />
+
+  <!-- Kaaba door -->
+  <path
+      android:pathData="
+          M147,34
+          L153,34
+          L153,40
+          L147,40
+          Z"
+      android:fillColor="#C7A04D" />
+</vector>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/walamakanMains"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.Wallamakan"
+    android:background="@drawable/backgrund_image"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_collapseMode="parallax"
+        android:background="@color/colorPrimary"
+        app:contentInsetStartWithNavigation="0dp"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_back"
+                app:tint="@color/backgroundColor"
+                tools:ignore="ContentDescription"
+                android:layout_gravity="center"
+                />
+            <View
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/txtWallamakanLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableEnd="@drawable/link"
+                android:drawablePadding="@dimen/_10sdp"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/rabar015"
+                android:gravity="center"
+                android:text="وەڵامەکان"
+                android:textAlignment="center"
+                android:textColor="@color/textColorWhite"
+                android:textSize="@dimen/_20sdp"
+                tools:ignore="HardcodedText,UseCompatTextViewDrawableXml,TextSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/rabar015"
+                android:gravity="center"
+                android:text="سەرچاوەی پرسیار و وەڵامەکان سایتی وەڵامەکان"
+                android:textAlignment="center"
+                android:textColor="@color/textColorWhite"
+                android:textSize="@dimen/_10sdp"
+                tools:ignore="HardcodedText,UseCompatTextViewDrawableXml,TextSizeCheck" />
+
+        </LinearLayout>
+             <View
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/btnSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/search"
+                app:tint="@color/backgroundColor"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                tools:ignore="ContentDescription"
+                android:layout_gravity="center"
+                />
+
+
+
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/wallamakanRecyclerView"/>
+
+</LinearLayout>

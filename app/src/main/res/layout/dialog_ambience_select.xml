@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="8dp"
+        android:layout_gravity="center"
+        android:background="@drawable/glass_background"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="دیمەنی باکگراوند لەگەڵ دەنگ"
+        android:textStyle="bold"
+        android:fontFamily="@font/rabar015"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/textColorWhite"
+        tools:ignore="HardcodedText" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/optionBonfire"
+            android:text="ئاگر"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:fontFamily="@font/rabar015"
+            android:drawablePadding="10dp"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:drawableTint="@color/textColorWhite"
+            android:textColor="@color/textColorWhite"
+            android:background="?android:attr/selectableItemBackground"
+            app:drawableTopCompat="@drawable/ic_flame"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/optionRain"
+            android:text="باران"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/rabar015"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:drawableTint="@color/textColorWhite"
+            app:drawableTopCompat="@drawable/ic_cloud_rain"
+            android:textSize="16sp"
+            android:textColor="@color/textColorWhite"
+            android:background="?android:attr/selectableItemBackground"
+            tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+
+
+        <TextView
+            android:id="@+id/optionWind"
+            android:text="بــــا"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:fontFamily="@font/rabar015"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:drawablePadding="10dp"
+            android:layout_gravity="center"
+            app:drawableTint="@color/textColorWhite"
+            app:drawableTopCompat="@drawable/ic_wind"
+            android:textColor="@color/textColorWhite"
+            android:background="?android:attr/selectableItemBackground" tools:ignore="HardcodedText" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+
+
+    <TextView
+        android:id="@+id/optionMorningBirds"
+        android:text="بالندە"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:fontFamily="@font/rabar015"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:drawablePadding="10dp"
+        android:layout_gravity="center"
+        app:drawableTint="@color/textColorWhite"
+        app:drawableTopCompat="@drawable/ic_bird"
+        android:textColor="@color/textColorWhite"
+        android:background="?android:attr/selectableItemBackground" tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/optionWaves"
+        android:text="شەپۆل"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/rabar015"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:drawablePadding="10dp"
+        android:layout_gravity="center"
+        app:drawableTint="@color/textColorWhite"
+        app:drawableTopCompat="@drawable/ic_water_wave"
+        android:textColor="@color/textColorWhite"
+        android:background="?android:attr/selectableItemBackground" tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/optionDefault"
+        android:text="لابردن"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:fontFamily="@font/rabar015"
+        android:gravity="center"
+        android:drawablePadding="10dp"
+        android:layout_gravity="center"
+        app:drawableTint="@color/textColorRed"
+        app:drawableTopCompat="@drawable/ic_no_sound"
+        android:textSize="16sp"
+        android:textColor="@color/textColorRed"
+        android:background="?android:attr/selectableItemBackground" tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+</LinearLayout>

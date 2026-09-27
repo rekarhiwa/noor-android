@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="5dp"
+    app:cardBackgroundColor="@color/backgroundColor"
+    android:layout_marginTop="1dp"
+    android:id="@+id/cardViewItem"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="right"
+        android:gravity="right"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="right"
+            tools:ignore="UselessParent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutChapter"
+                app:cardBackgroundColor="@color/babColor"
+                app:cardElevation="2dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:background="@color/cardBackgroundColor"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="10dp"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cardBackgroundColor"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:background="@color/cardBackgroundColor"
+                        android:layout_gravity="right"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/txtArabic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/naskh_ut"
+                            android:gravity="right"
+                            android:layout_gravity="right"
+                            android:text="بَابُ: أُمُورِ الْإِيمَانِ"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/textColorBlack"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText,TextContrastCheck" />
+                        <TextView
+                            android:id="@+id/txtKurdish"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="بەشی: کار و پێویستیەکانی باوەڕ"
+                            android:textSize="16sp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:textAlignment="textStart"
+                            android:fontFamily="@font/zain"
+                            android:textColor="@color/textColorBlack"
+                            android:gravity="right"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/txtSort"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/rabar015"
+                        android:gravity="right"
+                        android:layout_gravity="center"
+                        android:text="1"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/textColorRed"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,TextContrastCheck" />
+
+
+                </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:id="@+id/layoutHadith"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+
+                    <ImageView
+                        android:layout_width="24sp"
+                        android:layout_height="24sp"
+                        android:src="@drawable/ic_share"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/btnShare"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:layout_width="24sp"
+                        android:layout_height="24sp"
+                        android:src="@drawable/ic_copy"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:id="@+id/btnCopy"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewHadithArabic"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="10dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/textColorBlack"
+                    android:fontFamily="@font/naskh_ut"
+                    android:gravity="right"
+                    tools:ignore="HardcodedText,VisualLintLongText" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewHadithKurdish"
+                    android:textSize="18sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="10dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/textColorBlack"
+                    android:fontFamily="@font/zain"
+                    android:gravity="right"
+                    tools:ignore="HardcodedText,VisualLintLongText" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textTebiny"
+                    android:textSize="16sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="10dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/textColorBlack"
+                    android:fontFamily="@font/zain"
+                    android:gravity="right"
+                    tools:ignore="HardcodedText,VisualLintLongText" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textSanad"
+                    android:textSize="14sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:alpha="0.5"
+                    android:layout_marginStart="10dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/textColorBlack"
+                    android:fontFamily="@font/zain"
+                    android:gravity="right"
+                    tools:ignore="HardcodedText,VisualLintLongText" />
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

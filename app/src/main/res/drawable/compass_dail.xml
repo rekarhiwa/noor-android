@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="300dp"
+    android:height="300dp"
+    android:viewportWidth="300"
+    android:viewportHeight="300">
+
+  <!-- Outer soft circle -->
+  <path
+      android:pathData="M150,8
+                         A142,142 0,1 0,150,292
+                         A142,142 0,1 0,150,8"
+      android:fillColor="#F7F7EF"
+      android:strokeColor="#8C9991"
+      android:strokeWidth="2"/>
+
+  <!-- Inner circle -->
+  <path
+      android:pathData="M150,22
+                        A128,128 0,1 0,150,278
+                        A128,128 0,1 0,150,22"
+      android:fillColor="@android:color/transparent"
+      android:strokeColor="#C3CBC4"
+      android:strokeWidth="1"/>
+
+  <!-- Major tick: North -->
+  <path
+      android:pathData="M150,22 L150,38"
+      android:strokeColor="#65736C"
+      android:strokeWidth="3"
+      android:strokeLineCap="round"/>
+
+  <!-- Major tick: East -->
+  <path
+      android:pathData="M278,150 L262,150"
+      android:strokeColor="#65736C"
+      android:strokeWidth="3"
+      android:strokeLineCap="round"/>
+
+  <!-- Major tick: South -->
+  <path
+      android:pathData="M150,278 L150,262"
+      android:strokeColor="#65736C"
+      android:strokeWidth="3"
+      android:strokeLineCap="round"/>
+
+  <!-- Major tick: West -->
+  <path
+      android:pathData="M22,150 L38,150"
+      android:strokeColor="#65736C"
+      android:strokeWidth="3"
+      android:strokeLineCap="round"/>
+
+  <!-- Small compass ticks -->
+  <path
+      android:pathData="
+        M150,28 L150,37
+        M163,29 L162,38
+        M176,31 L174,40
+        M189,34 L186,43
+        M201,38 L197,47
+        M213,43 L208,51
+        M224,49 L218,57
+        M235,56 L228,63
+        M245,65 L237,71
+        M254,75 L245,80
+        M262,86 L253,90
+        M269,99 L260,102
+        M274,112 L265,114
+        M277,125 L268,126
+        M278,137 L269,137
+        M278,163 L269,163
+        M277,175 L268,174
+        M274,188 L265,186
+        M269,201 L260,198
+        M262,214 L253,210
+        M254,225 L245,220
+        M245,235 L237,229
+        M235,244 L228,237
+        M224,251 L218,243
+        M213,257 L208,249
+        M201,262 L197,253
+        M189,266 L186,257
+        M176,269 L174,260
+        M163,271 L162,262
+        M137,271 L138,262
+        M124,269 L126,260
+        M111,266 L114,257
+        M99,262 L103,253
+        M87,257 L92,249
+        M76,251 L82,243
+        M65,244 L72,237
+        M55,235 L63,229
+        M46,225 L55,220
+        M38,214 L47,210
+        M31,201 L40,198
+        M26,188 L35,186
+        M23,175 L32,174
+        M22,163 L31,163
+        M22,137 L31,137
+        M23,125 L32,126
+        M26,112 L35,114
+        M31,99 L40,102
+        M38,86 L47,90
+        M46,75 L55,80
+        M55,65 L63,71
+        M65,56 L72,63
+        M76,49 L82,57
+        M87,43 L92,51
+        M99,38 L103,47
+        M111,34 L114,43
+        M124,31 L126,40
+        M137,29 L138,38"
+      android:fillColor="@android:color/transparent"
+      android:strokeColor="#B8C0BA"
+      android:strokeWidth="1.3"
+      android:strokeLineCap="round"/>
+
+  <!-- N -->
+  <path
+      android:pathData="M143,57 L143,43 L157,57 L157,43"
+      android:fillColor="@android:color/transparent"
+      android:strokeColor="#27322E"
+      android:strokeWidth="2.2"
+      android:strokeLineCap="round"
+      android:strokeLineJoin="round"/>
+
+  <!-- E -->
+  <path
+      android:pathData="M259,143 L248,143 L248,157 L259,157
+                         M248,150 L257,150"
+      android:fillColor="@android:color/transparent"
+      android:strokeColor="#27322E"
+      android:strokeWidth="2.2"
+      android:strokeLineCap="round"
+      android:strokeLineJoin="round"/>
+
+  <!-- S -->
+  <path
+      android:pathData="M157,246
+                         C153,242 145,242 143,247
+                         C141,252 147,255 152,256
+                         C157,257 160,260 158,265
+                         C156,270 147,270 143,266"
+      android:fillColor="@android:color/transparent"
+      android:strokeColor="#27322E"
+      android:strokeWidth="2.2"
+      android:strokeLineCap="round"/>
+
+  <!-- W -->
+  <path
+      android:pathData="M43,143 L47,157 L52,148 L57,157 L61,143"
+      android:fillColor="@android:color/transparent"
+      android:strokeColor="#27322E"
+      android:strokeWidth="2.2"
+      android:strokeLineCap="round"
+      android:strokeLineJoin="round"/>
+
+  <!-- Subtle center circle -->
+  <path
+      android:pathData="M150,144
+                         A6,6 0,1 0,150,156
+                         A6,6 0,1 0,150,144"
+      android:fillColor="#E9EEE9"
+      android:strokeColor="#87948D"
+      android:strokeWidth="1"/>
+</vector>

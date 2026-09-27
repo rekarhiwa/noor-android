@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="7dp"
+    android:layout_marginEnd="4dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginStart="4dp"
+    app:cardBackgroundColor="@color/cardBackgroundColor"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_2sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutChapter"
+                app:cardBackgroundColor="@color/cardBackgroundColor"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="@dimen/_4sdp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_gravity="right"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/hadithCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginEnd="@dimen/_4sdp"
+                        android:fontFamily="@font/rabar015"
+                        android:gravity="end"
+                        android:text="4893 فەرموودە"
+                        android:textColor="@color/textColorBlack"
+                        android:textSize="@dimen/_10sdp"
+                        tools:ignore="TextSizeCheck" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/bookName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="گەوهەرەکانی"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_margin="@dimen/_5sdp"
+                android:textSize="@dimen/_17sdp"
+                android:textColor="@color/textColorBlack"
+                android:fontFamily="@font/rabar015"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@color/cardBackgroundColor"
+    android:layout_margin="8dp">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textSearchViewHadithArabic"
+            android:textSize="18sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp"
+            android:text="عن المغیره بن شعبه ان النبی كان اذا ذهب المذهب ابعد"
+            android:textAlignment="viewStart"
+            android:textColor="@color/textColorBlack"
+            android:fontFamily="@font/naskh_ut"
+            android:gravity="right"
+            tools:ignore="HardcodedText,VisualLintLongText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textSearchViewHadithKurdish"
+            android:textSize="18sp"
+            android:text="موغیره‌ی کوری شوعبه‌ ده‌گیریته‌وه‌ پیغه‌مبه‌ر کاتیک ده‌چووە سه‌رئاو دوور ده‌که‌وته‌وه‌ بۆئه‌وه‌ی دیار نه‌بیت"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/textColorBlack"
+            android:fontFamily="@font/zain"
+            android:gravity="right"
+            tools:ignore="HardcodedText,VisualLintLongText" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textSearchKitabNameSearch"
+            android:textSize="18sp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:textColor="@color/RedColor"
+            android:fontFamily="@font/zain"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="پەرتوکی سەرەتای سروش (وەحی)"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textBookNameSearch"
+            android:textSize="16sp"
+            android:layout_margin="6dp"
+            android:layout_gravity="center"
+            android:textColor="@color/textColorHint"
+            android:fontFamily="@font/zain"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="صەحیحی بوخاری"
+            />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

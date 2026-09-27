@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_close"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="20dp"
+    android:padding="10dp"
+    app:cardBackgroundColor="@color/backgroundColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <ImageButton
+                android:id="@+id/d_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_close_x"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/RedColor"
+                android:padding="5dp"
+                android:elevation="5dp"
+                android:background="@drawable/backgrownd_btn_taf"
+                app:tint="@color/white"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck,ImageContrastCheck" />
+            <TextView
+                android:id="@+id/id_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rabar014"
+                android:layout_weight="1"
+                android:text="دیاریکردنی تەفسیر"
+                android:textAlignment="center"
+                android:textColor="@color/textColorBlack"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                tools:ignore="HardcodedText" />
+
+
+            <TextView
+                android:id="@+id/txt_oneTafseer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rabar014"
+                android:layout_margin="10dp"
+                android:background="@drawable/backgrownd_btn_taf"
+                android:backgroundTint="@color/orangeColor"
+                android:elevation="5dp"
+                android:text="شێوازی یەک تەفسیر"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="@color/textColorWhite"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingBottom="8dp"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="8dp"
+                android:orientation="horizontal">
+
+
+                <Switch
+                    android:id="@+id/puxtaSwitch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgrownd_btn_taf"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/rabar014"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="پوختە"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/id_text"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                <Switch
+                    android:id="@+id/asanSwitch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgrownd_btn_taf"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/rabar014"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="ئاسان"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t1"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="8dp"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/ramanSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgrownd_btn_taf"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/rabar014"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="ڕامان"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t2"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                <Switch
+                    android:id="@+id/hajarSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgrownd_btn_taf"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/rabar014"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="هەژار"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t3"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="8dp"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/sanhaySwitch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgrownd_btn_taf"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/rabar014"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="سەناهی(بادینی)"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                <Switch
+                    android:id="@+id/jyanSwitch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgrownd_btn_taf"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/rabar014"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="ژیان(بادینی)"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/t5"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="8dp"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/rebarSwitch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgrownd_btn_taf"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/rabar014"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="ڕێبەر"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+
+                <Switch
+                    android:id="@+id/tawhidSwitch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgrownd_btn_taf"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/rabar014"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="تەوحید"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="8dp"
+                android:orientation="horizontal">
+
+
+                <Switch
+                    android:id="@+id/roshnSwitch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgrownd_btn_taf"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/rabar014"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="ڕۆشن"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                <Switch
+                    android:id="@+id/muyesarSwitch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgrownd_btn_taf"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/rabar014"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="مویەسەر"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="8dp"
+                android:orientation="horizontal">
+
+                <Switch
+                    android:id="@+id/runahySwitch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgrownd_btn_taf"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/rabar014"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="ڕوناهی (بادینی)"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+                <Switch
+                    android:id="@+id/muxtasarSwitch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/backgrownd_btn_taf"
+                    android:elevation="5dp"
+                    android:fontFamily="@font/rabar014"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="موختەسەر"
+                    android:textAlignment="center"
+                    android:textColor="@color/textColorBlack"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck,UseSwitchCompatOrMaterialXml" />
+
+            </LinearLayout>
+
+
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

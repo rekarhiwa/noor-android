@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#753E51</color>
+    <color name="colorPrimaryDark">#753E51</color>
+
+    <color name="colorPrayer">#FFB9A6</color>
+    <color name="colorSun">#FCB033</color>
+    <color name="colorAccent">#753E51</color>
+    <color name="card_bg_color">#753E51</color>
+
+    <color name="black">#5F3F4C</color>
+    <color name="black2">#473D53</color>
+    <color name="white">#F5F0EA</color>
+
+    <color name="icon_mine_color">#BA5D44</color>
+
+
+    <color name="IcKhatmColor">#F5F0EA</color>
+    <color name="IcKhatmColor2">#753E51</color>
+    <color name="khatm_bg_card_color">#FFFFFF</color>
+    <color name="search_background_color_white">#FFFFFF</color>
+    <color name="cardBackgroundColor">#FFFFFF</color>
+
+    <color name="babColor">#E8E3DE</color>
+    <color name="cardBackgroundColorSelect">#753E51</color>
+    <color name="scroll_bar_color">#753E51</color>
+
+    <color name="backgroundColor">#F4EBE2</color>
+    <color name="bgOfMediaPlayColor">#F4E4D3</color>
+    <color name="icColor">#F4EBE1</color>
+    <color name="mainFGColor">#F4ECE2</color>
+    <color name="mainBGColor">#71B7C0</color>
+
+    <color name="gray">#686868</color>
+    <color name="darkOrangeColor">#FF3E01</color>
+    <color name="greenColor">#13832F</color>
+    <color name="greenDarkColor">#095D46</color>
+    <color name="orangeColor">#F88103</color>
+    <color name="RedColor">#F44336</color>
+    <color name="yellow">#FFCE1B</color>
+    <color name="colorOrang">#C37859</color>
+    <color name="colorMainCard">#FFFFFF</color>
+    <color name="colorIcon">#AA7D6A</color>
+    <color name="colorBrown">#AA7D6A</color>
+    <color name="colorLightBrown">#A89288</color>
+
+
+    <color name="sliderBG">#F4ECE2</color>
+
+    <color name="textColorWhite">#F5F0EA</color>
+    <color name="textColorBlack">#000000</color>
+    <color name="textColorLightBrown">#A89288</color>
+    <color name="textColorSelected">#FFFFFF</color>
+    <color name="textColorRed">#940033</color>
+    <color name="textColorT">#923D5A</color>
+    <color name="second_text_color">#895668</color>
+    <color name="textColorHint">#B48394</color>
+    <color name="textColorHintSelected">#BAA5AC</color>
+
+    <color name="fastPayTextColor">#fc2861</color>
+    <color name="fibTextColor">#56B99D</color>
+    <color name="korekTextColor">#006FBA</color>
+
+
+    <color name="SplashScreenColor">#F5F0EA</color>
+
+    <color name="light_blue_50">#FFE1F5FE</color>
+    <color name="light_blue_200">#FF81D4FA</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="hadith_highlight">#26CCC4BA</color>
+    <color name="ayah_highlight">#26CCC4BA</color>
+
+
+    <color name="mediaPlayIconColor">#AA7D6A</color>
+
+
+    <color name="xawtnanColor">#292023</color>
+    <color name="ewaraColor">#813630</color>
+    <color name="asrColor">#4d617a</color>
+    <color name="newaroColor">#9f8437</color>
+    <color name="bayanyColor">#977144</color>
+    <color name="barwarColor">#3a78db</color>
+
+    <color name="qibla_background">#F5F7EC</color>
+    <color name="qibla_dark">#193C32</color>
+    <color name="qibla_primary">#B08B3E</color>
+    <color name="qibla_secondary">#718078</color>
+    <color name="qibla_card">#FBFCF5</color>
+</resources>

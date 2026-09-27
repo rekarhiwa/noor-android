@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="rtl"
+    android:background="@drawable/bg_welcome_dialog">
+
+    <!-- ===================================== -->
+    <!-- TOP IMAGE -->
+    <!-- ===================================== -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/welcomeImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="@null"
+            app:shapeAppearanceOverlay="@style/WelcomeImageShape" />
+
+        <!-- Dark gradient over image -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_image_gradient" />
+
+        <!-- Wave -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_gravity="bottom"
+            android:scaleType="fitXY"
+            android:src="@drawable/welcome_wave"
+            android:contentDescription="@null" />
+
+    </FrameLayout>
+
+
+    <!-- ===================================== -->
+    <!-- CLOSE BUTTON -->
+    <!-- ===================================== -->
+
+    <TextView
+        android:id="@+id/welcomeCloseX"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_gravity="top|start"
+        android:layout_margin="14dp"
+        android:background="@drawable/bg_close_button"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="×"
+        android:textColor="@android:color/white"
+        android:textSize="29sp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+    <!-- ===================================== -->
+    <!-- CONTENT -->
+    <!-- ===================================== -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="205dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="20dp">
+
+
+        <!-- TITLE -->
+
+        <TextView
+            android:id="@+id/welcomeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rabar015"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/textColorWhite"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+        <!-- DESCRIPTION -->
+
+        <TextView
+            android:id="@+id/welcomeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/rabar015"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#BFC1D0"
+            android:textSize="16sp"
+            android:lineSpacingExtra="3dp" />
+
+
+        <!-- ================================= -->
+        <!-- FEATURES -->
+        <!-- ================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layoutDirection="rtl">
+
+
+            <!-- Documents -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:background="@drawable/bg_icon_purple">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_document"
+                        android:contentDescription="@null" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="سەدان بابەت"
+                    android:fontFamily="@font/rabar015"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+            <!-- Quran -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:background="@drawable/bg_icon_gold">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_qurans"
+                        android:contentDescription="@null" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="قورئان"
+                    android:fontFamily="@font/rabar015"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+            <!-- Hadith -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:background="@drawable/bg_icon_green">
+
+                    <ImageView
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_hadith"
+                        android:contentDescription="@null" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="حەدیس"
+                    android:fontFamily="@font/rabar015"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+            <!-- Articles -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:background="@drawable/bg_icon_blue">
+
+                    <ImageView
+                        android:layout_width="31dp"
+                        android:layout_height="31dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_books"
+                        android:contentDescription="@null" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="وتار"
+                    android:fontFamily="@font/rabar015"
+                    android:textColor="@color/textColorWhite"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- ================================= -->
+        <!-- DIVIDER -->
+        <!-- ================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#292D42" />
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/ic_leaf"
+                android:contentDescription="@null" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#292D42" />
+
+        </LinearLayout>
+
+
+        <!-- ================================= -->
+        <!-- MAIN BUTTON -->
+        <!-- ================================= -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/welcomeButton"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="8dp"
+
+            android:fontFamily="@font/rabar015"
+            android:text="بینین"
+            android:textColor="@color/textColorWhite"
+            android:textSize="17sp"
+            android:textStyle="bold"
+
+            android:gravity="center"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+
+            android:background="@drawable/bg_welcome_button"
+
+            app:backgroundTint="@null"
+
+            app:icon="@drawable/ic_external_link"
+            app:iconTint="@color/textColorWhite"
+            app:iconSize="24dp"
+            app:iconPadding="10dp"
+            app:iconGravity="textEnd"
+            app:cornerRadius="0dp" />
+
+        <!-- CLOSE TEXT -->
+
+        <TextView
+            android:id="@+id/welcomeClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/rabar015"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="داخستن"
+            android:textColor="#9295AA"
+            android:textSize="14sp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+</FrameLayout>

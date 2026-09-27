@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ZikrLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="1dp"
+    android:layout_marginBottom="1dp"
+    app:cardBackgroundColor="@color/cardBackgroundColor">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="end"
+            android:padding="10dp"
+            >
+
+
+            <TextView
+                android:id="@+id/TxtZikr"
+                android:text="أَسْتَغْفِرُ ﷲَ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/quran"
+                android:textColor="@color/textColorBlack"
+                android:textSize="22sp"
+                />
+
+
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>

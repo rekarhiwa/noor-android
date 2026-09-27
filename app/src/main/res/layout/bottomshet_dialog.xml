@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sheet_calnder"
+    android:orientation="vertical"
+    android:background="@drawable/bottomshet_back"
+    >
+
+    <View
+        android:layout_width="50dp"
+        android:layout_height="5dp"
+        android:background="@drawable/view_background"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center|top" />
+
+
+    <TextView
+        android:id="@+id/tvHijriDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/rabar015"
+        android:text="Hijri calendar"
+        android:layout_gravity="center|top"
+        android:textColor="@color/textColorBlack"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <!-- Month Title -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/btnPrev"
+                    android:src="@drawable/angle_small_left"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvMonthYear"
+                    android:fontFamily="@font/rabar015"
+                    android:textColor="@color/textColorBlack"
+                    android:text="March 2026"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="16dp"/>
+
+                <ImageView
+
+                    android:id="@+id/btnNext"
+                    android:src="@drawable/angle_small_right"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"/>
+            </LinearLayout>
+
+
+            <!-- Days Names -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="4dp"
+                android:weightSum="7">
+
+                <!-- Day Item -->
+                <TextView
+                    android:id="@+id/day1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="S"
+                    android:layout_marginEnd="3dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textColorBlack"
+                    android:background="@drawable/bg_day_circle"/>
+
+                <TextView
+                    android:id="@+id/day2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="M"
+                    android:layout_marginEnd="3dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textColorBlack"
+                    android:background="@drawable/bg_day_circle"/>
+
+                <TextView
+                    android:id="@+id/day3"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="T"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="3dp"
+                    android:textColor="@color/textColorBlack"
+                    android:background="@drawable/bg_day_circle"/>
+
+                <TextView
+                    android:id="@+id/day4"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="W"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="3dp"
+                    android:textColor="@color/textColorBlack"
+                    android:background="@drawable/bg_day_circle"/>
+
+                <TextView
+                    android:id="@+id/day5"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="T"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="3dp"
+                    android:textColor="@color/textColorBlack"
+                    android:background="@drawable/bg_day_circle"/>
+
+                <TextView
+                    android:id="@+id/day6"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="F"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="3dp"
+                    android:textColor="@color/textColorBlack"
+                    android:background="@drawable/bg_day_circle"/>
+
+                <TextView
+                    android:id="@+id/day7"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="S"
+                    android:textStyle="bold"
+                    android:textColor="@color/textColorBlack"
+                    android:background="@drawable/bg_day_circle"/>
+            </LinearLayout>
+
+            <!-- Calendar Grid -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_today"
+                android:backgroundTint="@color/khatm_bg_card_color"
+                android:padding="5dp"
+                android:layout_marginBottom="20dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+

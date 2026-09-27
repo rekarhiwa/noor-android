@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+
+    <!-- Gregorian -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvDay"
+        android:text="15"
+        android:fontFamily="@font/rabar015"
+        android:textColor="@color/textColorBlack"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <!-- Hijri -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvHijri"
+        android:layout_gravity="center"
+        android:fontFamily="@font/rabar014"
+        android:textColor="@color/darkOrangeColor"
+        android:gravity="center"
+        android:text="2 رمضان"
+        android:textSize="10sp"/>
+</LinearLayout>

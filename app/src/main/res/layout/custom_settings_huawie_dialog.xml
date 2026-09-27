@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardElevation="@dimen/_20sdp"
+    android:padding="@dimen/_10sdp"
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/backgroundColor"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        >
+
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ڕێکخستنی تایبەت بۆ ئامێری هواوی"
+        android:fontFamily="@font/rabar015"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/dialogMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/rabar014"
+        android:text="
+1. بچۆ بۆ ڕێکخستنەکان (Settings).\n
+2. کرتە بکە لە 'ئەپپس' (Apps).\n
+3. کرتە بکە لە 'دەستپێکردنی بەرنامە' (App launch).\n
+4.ناوی بەرنامەکەمان (Noor) بدۆزەرەوە و کرتەی لێ بکە.\n
+5. دوگمەی 'بەڕێوەبردنی خۆکار' (Manage automatically)
+بکوژێنەرەوە و دڵنیابە کە هەرسێ بژاردەکە داگیرساون."
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnTutorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorWhite"
+            android:paddingEnd="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/rabar014"
+            android:paddingStart="10dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_yes_bg3"
+            android:text="فێرکاری" />
+        <Button
+            android:id="@+id/btnLater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorWhite"
+            android:paddingEnd="10dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/rabar014"
+            android:paddingStart="10dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/btn_no_bg"
+            android:text="دواتـــــــــــــــر" />
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_yes_bg"
+            android:fontFamily="@font/rabar014"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="بچۆ بۆ ڕێکخستنەکان"
+            android:textColor="@color/textColorWhite"
+            android:textSize="@dimen/_10sdp"
+            tools:ignore="TextSizeCheck" />
+    </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

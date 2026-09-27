@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    tools:context=".activities.SearchHadithActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBack"
+            android:src="@drawable/ic_back"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="گەڕان"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/textColorBlack"
+            android:fontFamily="@font/rabar015"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="30dp"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="نم :  نوێژ"
+        android:fontFamily="@font/rabar015"
+        android:textColorHint="@color/textColorHint"
+        android:textColor="@color/textColorBlack"
+        android:textSize="18sp"
+        android:background="@drawable/search_backgroung"
+        android:layout_margin="10dp"
+        android:elevation="5dp"
+        android:padding="10dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/emptyViews"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="هیچ داتایەک نە دۆزرایەوە !"
+            android:fontFamily="@font/zain"
+            android:textSize="25sp"
+            android:textColor="@color/RedColor"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="لە بۆکسەکەی سەرەوە شتێک بنوسە بۆ دەستکەوتنی داتاکان"
+            android:fontFamily="@font/zain"
+            android:textSize="18sp"
+            android:textColor="@color/textColorBlack"
+            android:alpha="0.5"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:id="@+id/searchRecyclerView"/>
+
+</LinearLayout>

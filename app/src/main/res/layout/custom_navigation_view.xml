@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="@color/mainFGColor"
+    >
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="280dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:riv_corner_radius="25dp"
+                android:src="@mipmap/ic_launcher_round"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="نوور - قورئانی پیرۆز"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/textColorBlack"
+                android:fontFamily="@font/zain"/>
+        </LinearLayout>
+
+
+        <!-- MENU ITEMS -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/mainFGColor"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/menu_about"
+                android:layout_margin="5dp"
+                style="@style/DrawerItem">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="دەربارەی نوور"
+                    android:layout_weight="1"
+                    style="@style/DrawerText"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_ab"
+                    android:layout_marginStart="5dp"
+                    style="@style/DrawerIcon"/>
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/mainFGColor"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu_help"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                style="@style/DrawerItem">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="پشتگیری"
+                    android:layout_weight="1"
+                    style="@style/DrawerText"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/hand_holding_heart"
+                    android:layout_marginStart="5dp"
+                    style="@style/DrawerIcon"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/mainFGColor"
+            >
+            <LinearLayout
+                android:id="@+id/menu_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                style="@style/DrawerItem">
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ڕێکخستنەکان"
+                    android:layout_weight="1"
+                    style="@style/DrawerText"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_settings"
+                    android:layout_marginStart="5dp"
+                    style="@style/DrawerIcon"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/mainFGColor"
+            >
+            <LinearLayout
+                android:id="@+id/menu_web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                style="@style/DrawerItem">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="سۆرس کۆد"
+                    android:layout_weight="1"
+                    style="@style/DrawerText"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/link"
+                    android:layout_marginStart="5dp"
+                    style="@style/DrawerIcon"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/mainFGColor"
+            >
+            <LinearLayout
+                android:id="@+id/menu_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                style="@style/DrawerItem">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="هاوبەشی پێکردن"
+                    android:layout_weight="1"
+                    style="@style/DrawerText"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_share"
+                    android:layout_marginStart="5dp"
+                    style="@style/DrawerIcon"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/mainFGColor"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/menu_star"
+                android:layout_margin="5dp"
+                style="@style/DrawerItem">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="هەڵسەنگاندن"
+                    android:layout_weight="1"
+                    style="@style/DrawerText"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_star"
+                    android:layout_marginStart="5dp"
+                    style="@style/DrawerIcon"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/mainFGColor"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/menu_exit"
+                android:layout_margin="5dp"
+                style="@style/DrawerItem">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="داخستن"
+                    android:layout_weight="1"
+                    style="@style/DrawerText"/>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_exit"
+                    android:layout_marginStart="5dp"
+                    style="@style/DrawerIcon"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+

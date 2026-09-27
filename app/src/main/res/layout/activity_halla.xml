@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.Halla">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_back"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorBlack"
+            android:fontFamily="@font/rabar015"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="هەڵە باوەکان"
+            android:textSize="@dimen/_18sdp"
+            />
+
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorBlack"
+                    android:fontFamily="@font/rabar015"
+                    android:textStyle="bold"
+                    android:layout_gravity="end"
+                    android:text="تەکبیر : "
+                    android:textSize="@dimen/_18sdp"
+                    />
+
+                <ImageView
+                    android:layout_width="400dp"
+                    android:layout_height="500dp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:elevation="5dp"
+                    android:src="@drawable/i01" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorBlack"
+                    android:fontFamily="@font/rabar015"
+                    android:textStyle="bold"
+                    android:layout_gravity="end"
+                    android:text="قیام : "
+                    android:textSize="@dimen/_18sdp"
+                    />
+                <ImageView
+                    android:layout_width="400dp"
+                    android:layout_height="500dp"
+                    android:layout_margin="10dp"
+                    android:elevation="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/i02" />
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorBlack"
+                    android:fontFamily="@font/rabar015"
+                    android:textStyle="bold"
+                    android:layout_gravity="end"
+                    android:text="ڕکوع : "
+                    android:textSize="@dimen/_18sdp"
+                    />
+
+                <ImageView
+                    android:layout_width="400dp"
+                    android:layout_height="500dp"
+                    android:layout_margin="10dp"
+                    android:elevation="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/i03" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorBlack"
+                    android:fontFamily="@font/rabar015"
+                    android:textStyle="bold"
+                    android:layout_gravity="end"
+                    android:text="سجود : "
+                    android:textSize="@dimen/_18sdp"
+                    />
+
+                <ImageView
+                    android:layout_width="400dp"
+                    android:layout_height="500dp"
+                    android:layout_margin="10dp"
+                    android:elevation="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/i04" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorBlack"
+                    android:fontFamily="@font/rabar015"
+                    android:textStyle="bold"
+                    android:layout_gravity="end"
+                    android:text="دانیشتن : "
+                    android:textSize="@dimen/_18sdp"
+                    />
+
+                <ImageView
+                    android:layout_width="400dp"
+                    android:layout_height="500dp"
+                    android:layout_margin="10dp"
+                    android:elevation="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/i05"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorBlack"
+                    android:fontFamily="@font/rabar015"
+                    android:textStyle="bold"
+                    android:layout_gravity="end"
+                    android:text="تەحیات : "
+                    android:textSize="@dimen/_18sdp"
+                    />
+
+                <ImageView
+                    android:layout_width="400dp"
+                    android:layout_height="500dp"
+                    android:layout_margin="10dp"
+                    android:elevation="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/i06" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColorBlack"
+                    android:fontFamily="@font/rabar015"
+                    android:textStyle="bold"
+                    android:layout_gravity="end"
+                    android:text="سەلام دانەوە : "
+                    android:textSize="@dimen/_18sdp"
+                    />
+
+                <ImageView
+                    android:layout_width="400dp"
+                    android:layout_height="500dp"
+                    android:layout_margin="10dp"
+                    android:elevation="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/i07"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

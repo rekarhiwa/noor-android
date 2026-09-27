@@ -1,0 +1,25 @@
+<resources>
+    <declare-styleable name="AppWidgetAttrs">
+        <attr name="appWidgetPadding" format="dimension" />
+        <attr name="appWidgetInnerRadius" format="dimension" />
+        <attr name="appWidgetRadius" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="GifView">
+        <attr name="cornerRadius" format="dimension"/>
+        <attr name="gifSrc" format="reference" />
+    </declare-styleable>
+
+
+
+        <declare-styleable name="WaveSeekBar">
+            <attr name="waveProgressColor" format="color" />
+            <attr name="waveBackgroundColor" format="color" />
+            <attr name="waveBarWidth" format="dimension" />
+            <attr name="waveBarGap" format="dimension" />
+            <attr name="waveCornerRadius" format="dimension" />
+        </declare-styleable>
+
+
+</resources>
