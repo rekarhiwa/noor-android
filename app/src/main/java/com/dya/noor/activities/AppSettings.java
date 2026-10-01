@@ -29,7 +29,11 @@ import androidx.core.content.ContextCompat;
 
 import com.dya.noor.BaseActivity.BaseActivity;
 import com.dya.noor.R;
+import com.dya.noor.utility.AppCoachTour;
 import com.google.android.material.snackbar.Snackbar;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import java.util.Objects;
 
@@ -539,7 +543,25 @@ public class AppSettings extends BaseActivity {
             }
         });
 
+        View coachReplay = findViewById(R.id.coachTourReplayLayout);
+        coachReplay.setOnClickListener(v -> AppCoachTour.replayFromSettings(AppSettings.this));
 
+        View ayahWidgetSettings = findViewById(R.id.ayahWidgetSettingsLayout);
+        ayahWidgetSettings.setOnClickListener(v ->
+                startActivity(new Intent(AppSettings.this, AyahWidgetSettings.class)));
+
+        coachReplay.postDelayed(() -> {
+            List<AppCoachTour.Step> steps = new ArrayList<>();
+            steps.add(new AppCoachTour.Step(DangLayout, "دەنگی بانگ",
+                    "دەنگی خوێنەر / بانگ هەڵبژێرە بۆ ئاگادارکردنەوەکان."));
+            steps.add(new AppCoachTour.Step(PirmessionLayout, "ڕێکخستنی بانگ",
+                    "مۆڵەتەکان، ئاگادارکردنەوە و ڕێکخستنەکانی بانگ لێرەن."));
+            steps.add(new AppCoachTour.Step(textSizLayout, "قەبارەی نووسین",
+                    "قەبارەی دەقی تەفسیر و خوێندنەوە بگۆڕە."));
+            steps.add(new AppCoachTour.Step(coachReplay, "دووبارەکردنی ڕێنمایی",
+                    "هەر کاتێک بیەوێت، ڕێنماییەکانی ئەپ دووبارە پیشان بدە."));
+            AppCoachTour.maybeShow(AppSettings.this, AppCoachTour.KEY_SETTINGS, steps, false);
+        }, 550);
 
     }
     public void updateAthinName(){

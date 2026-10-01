@@ -145,6 +145,38 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="2dp"
+            android:layout_margin="5dp"
+            app:cardBackgroundColor="@color/mainFGColor"
+            >
+            <LinearLayout
+                android:id="@+id/menu_coach_tour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                style="@style/DrawerItem">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ڕێنمایی ئەپ"
+                    android:layout_weight="1"
+                    style="@style/DrawerText"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_coach_tour"
+                    android:layout_marginStart="5dp"
+                    style="@style/DrawerIcon"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
 
 
         <View

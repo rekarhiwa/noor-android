@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgrund_image"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activities.AyahWidgetSettings">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_back"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/rabar015"
+            android:gravity="center"
+            android:text="ویجێتی ئایەت"
+            android:textColor="@color/textColorBlack"
+            android:textSize="22sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rabar015"
+                android:text="جۆری ویجێت"
+                android:textColor="@color/textColorBlack"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:id="@+id/modeDaily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backgrownd_btn_taf"
+                android:orientation="vertical"
+                android:padding="14dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rabar015"
+                    android:text="ڕۆژانە · ١ ئایەت"
+                    android:textColor="@color/textColorBlack"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/rabar014"
+                    android:text="هەر ڕۆژێک ئایەتێکی نوێ لەسەر هۆم سکرین"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modeScreenshot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backgrownd_btn_taf"
+                android:orientation="vertical"
+                android:padding="14dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rabar015"
+                    android:text="سکریشۆت / پەنجە"
+                    android:textColor="@color/textColorBlack"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/rabar014"
+                    android:text="پەنجە لەسەر ویجێت ئایەت دەگۆڕێت"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modeFixed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/backgrownd_btn_taf"
+                android:orientation="vertical"
+                android:padding="14dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rabar015"
+                    android:text="ئایەتی جێگیر"
+                    android:textColor="@color/textColorBlack"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/rabar014"
+                    android:text="هەمان ئایەت هەمیشە دەمێنێتەوە تا خۆت بیگۆڕیت"
+                    android:textColor="@color/second_text_color"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fixedPickLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rabar015"
+                    android:text="سوورەت"
+                    android:textColor="@color/textColorBlack"
+                    tools:ignore="HardcodedText" />
+                <Spinner
+                    android:id="@+id/spinnerSura"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="6dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/rabar015"
+                    android:text="ئایەت"
+                    android:textColor="@color/textColorBlack"
+                    tools:ignore="HardcodedText" />
+                <Spinner
+                    android:id="@+id/spinnerAyah"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/previewCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ayah_widget_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/previewMeta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rabar015"
+                    android:gravity="center"
+                    android:textColor="#F0E6DE"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/previewText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/uthmanic_hafs1b_ver13"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/previewTranslation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/rabar014"
+                    android:gravity="center"
+                    android:textColor="#E8D5C8"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnApply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/coach_next_btn"
+                android:fontFamily="@font/rabar015"
+                android:gravity="center"
+                android:padding="14dp"
+                android:text="پاشەکەوت و نوێکردنەوە"
+                android:textColor="@color/textColorWhite"
+                android:textSize="16sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/rabar014"
+                android:gravity="center"
+                android:text="لە هۆم سکرین → Widgets → نوور → ئایەتی قورئان زیاد بکە"
+                android:textColor="@color/second_text_color"
+                android:textSize="12sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

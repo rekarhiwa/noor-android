@@ -29,8 +29,8 @@ import java.util.Locale;
 public class ScheduleNotification {
 
     public static String PreferencesName = "NotificationPrefs";
-    private static final int NOTIFICATION_DELAY_AFTER = 15 * 60 * 1000; // 15 minutes
-    private static final int NOTIFICATION_DELAY_BEFORE = -60 * 60 * 1000; // -1 hour
+    private static final int NOTIFICATION_DELAY_AFTER = 15 * 60 * 1000; // 15 minutes after adhan
+    private static final int NOTIFICATION_DELAY_BEFORE = -15 * 60 * 1000; // 15 minutes before adhan
 
     /**
      * Schedules a generic notification.

@@ -88,7 +88,9 @@ import com.dya.noor.databinding.ActivityMainBinding;
 import com.dya.noor.module.ActivityItem;
 import com.dya.noor.module.DayModel;
 import com.dya.noor.notifications.ScheduleNotification;
+import com.dya.noor.utility.AppCoachTour;
 import com.dya.noor.utlis.Utils;
+import com.dya.noor.widget.AyahWidgetHelper;
 import com.dya.noor.widget.CallaUpdateWidget;
 import com.dya.noor.widget.SalatWidget;
 import com.dya.noor.widget.SalatWidgetVertical;
@@ -763,6 +765,11 @@ public class MainActivity extends BaseActivity {
             startActivity(intent);
             drawerLayout.closeDrawer(GravityCompat.END);
         });
+        findViewById(R.id.menu_coach_tour).setOnClickListener(v -> {
+            drawerLayout.closeDrawer(GravityCompat.END);
+            AppCoachTour.resetAll(MainActivity.this);
+            scheduleHomeCoachTour(true);
+        });
         findViewById(R.id.menu_exit).setOnClickListener(v -> {
             onBackPressed();
             drawerLayout.closeDrawer(GravityCompat.END);
@@ -825,6 +832,7 @@ public class MainActivity extends BaseActivity {
 
         btnMenu.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.END));
 
+        scheduleHomeCoachTour(false);
 
         Calendar calendar = Calendar.getInstance();
         int day = calendar.get(Calendar.DAY_OF_MONTH);
@@ -2205,6 +2213,47 @@ public class MainActivity extends BaseActivity {
                     View.GONE
             );
         }
+
+        AppCoachTour.consumeReplayIfNeeded(this, () -> scheduleHomeCoachTour(true));
+        AyahWidgetHelper.refresh(this, false);
+    }
+
+    private void scheduleHomeCoachTour(boolean force) {
+        ActRecyclerView.postDelayed(() -> showHomeCoachTour(force, 0), force ? 300 : 700);
+    }
+
+    private void showHomeCoachTour(boolean force, int attempt) {
+        if (isFinishing()) return;
+
+        View quran = AppCoachTour.recyclerItem(ActRecyclerView, 0);
+        View listen = AppCoachTour.recyclerItem(ActRecyclerView, 3);
+        View khatm = AppCoachTour.recyclerItem(ActRecyclerView, 4);
+        View prayerTimes = AppCoachTour.recyclerItem(ActRecyclerView, 19);
+
+        if ((quran == null || listen == null || khatm == null) && attempt < 12) {
+            ActRecyclerView.postDelayed(() -> showHomeCoachTour(force, attempt + 1), 120);
+            return;
+        }
+
+        List<AppCoachTour.Step> steps = new ArrayList<>();
+        steps.add(new AppCoachTour.Step(donationLayout, "پشتگیری نور",
+                "لێرەوە دەتوانیت پشتگیری ئەپەکە بکەیت و یارمەتی پەرەپێدان بدەیت."));
+        steps.add(new AppCoachTour.Step(btnMenu, "مینیو",
+                "ڕێکخستن، دەربارە و پشتگیری لەم مینیویەدا هەیە."));
+        steps.add(new AppCoachTour.Step(cardviewTime, "کاتی بانگ",
+                "کاتەکانی نوێژ بەپێی شارەکەت لێرە دەردەکەون. کرتە بکە بۆ وردەکاری."));
+        steps.add(new AppCoachTour.Step(findViewById(R.id.scroll), "زیکری ڕۆژانە",
+                "زیکری بەیانیان، ئێواران و خەوتن بە خێرایی لێرەوە دەکرێنەوە."));
+        steps.add(new AppCoachTour.Step(quran, "قورئانی پیرۆز",
+                "تەفسیر، مسحف و دەق — سوورەتەکان لێرە بخوێنەوە."));
+        steps.add(new AppCoachTour.Step(listen, "دەنگی قورئان",
+                "گوێگرتن لە قورئان لەگەڵ دەنگی باکگراوند."));
+        steps.add(new AppCoachTour.Step(khatm, "خەتمی قورئان",
+                "پلانی خەتم دروست بکە، دانەکانی ڕۆژ دیاری بکە و بیرخستنەوە وەربگرە."));
+        steps.add(new AppCoachTour.Step(prayerTimes != null ? prayerTimes : btnBang, "ئاگاداری بانگ",
+                "کاتەکانی بانگ و ئاگادارکردنەوەکان لێرە ڕێکدەخرێن."));
+
+        AppCoachTour.maybeShow(this, AppCoachTour.KEY_HOME, steps, force);
     }
 
     @Override

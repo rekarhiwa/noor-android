@@ -13,6 +13,7 @@ public class UpdateWidgetReceiver extends BroadcastReceiver {
          try {
              SalatWidget.updateAllWidgetViews(context);
              SalatWidgetVertical.updateAllWidgetViews(context);
+             AyahWidgetHelper.refresh(context, false);
              Log.d(TAG, "worked ...." );
               }catch (Exception e){
              Log.d(TAG, "not worked ...." );

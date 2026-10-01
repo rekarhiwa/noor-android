@@ -28,6 +28,7 @@ import com.dya.noor.R;
 import com.dya.noor.database.MydbClass;
 import com.dya.noor.download.DownloadFilesTask;
 import com.dya.noor.notifications.ScheduleNotification;
+import com.dya.noor.utility.AppCoachTour;
 import com.dya.noor.utlis.QuranPageUtils;
 
 import java.io.File;
@@ -144,6 +145,18 @@ public class Khatm extends BaseActivity {
     int khatmENDLayoutVisibility ;
     int layoutSettingsVisibility ;
 
+    /** `juz` | `daily` — both use currentJuz + تەواو. */
+    String khatmMode = "juz";
+    int planDays = 30;
+    TextView btnModeJuz, btnModeDaily, txtDailyPreview, txtSetupTitle;
+    LinearLayout juzModeSetup, dailyModeSetup;
+    TextView chipDays7, chipDays15, chipDays30, chipDays60, chipDaysFree;
+
+    static int juzPerDayFromPlan(int days) {
+        if (days <= 0) return 1;
+        return Math.max(1, (int) Math.ceil(30.0 / days));
+    }
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -173,6 +186,18 @@ public class Khatm extends BaseActivity {
         switchAfterPrayer = findViewById(R.id.NotifiSwitch);
         switchBeforePrayer = findViewById(R.id.NotifiSwitchHour);
         switchAfterIsha = findViewById(R.id.NotifiSwitchEveryEsha);
+
+        btnModeJuz = findViewById(R.id.btnModeJuz);
+        btnModeDaily = findViewById(R.id.btnModeDaily);
+        juzModeSetup = findViewById(R.id.juzModeSetup);
+        dailyModeSetup = findViewById(R.id.dailyModeSetup);
+        txtDailyPreview = findViewById(R.id.txtDailyPreview);
+        txtSetupTitle = findViewById(R.id.txtSetupTitle);
+        chipDays7 = findViewById(R.id.chipDays7);
+        chipDays15 = findViewById(R.id.chipDays15);
+        chipDays30 = findViewById(R.id.chipDays30);
+        chipDays60 = findViewById(R.id.chipDays60);
+        chipDaysFree = findViewById(R.id.chipDaysFree);
 
         HelpNoorLayout.setOnClickListener(v -> {
             Intent intent = new Intent(this, HelpNoor.class);
@@ -261,9 +286,29 @@ public class Khatm extends BaseActivity {
         // Initialize Juz to 1 if not set
         currentJuz = sharedPreferences.getInt("currentJuz", 1);
         QuranPageUtils.KhatmNumber = sharedPreferences.getInt("KhatmNumber", 1);
+        khatmMode = sharedPreferences.getString("khatm_mode", "juz");
+        planDays = sharedPreferences.getInt("planDays", 30);
 
         txtKhatmNUmber.setText(""+QuranPageUtils.KhatmNumber);
         KhatmNumberS = sharedPreferences.getInt("KhatmNumber", 1);
+
+        applyModeUi();
+        btnModeJuz.setOnClickListener(v -> {
+            khatmMode = "juz";
+            editor.putString("khatm_mode", khatmMode).apply();
+            applyModeUi();
+        });
+        btnModeDaily.setOnClickListener(v -> {
+            khatmMode = "daily";
+            editor.putString("khatm_mode", khatmMode).apply();
+            applyModeUi();
+            selectPlanDays(planDays);
+        });
+        chipDays7.setOnClickListener(v -> selectPlanDays(7));
+        chipDays15.setOnClickListener(v -> selectPlanDays(15));
+        chipDays30.setOnClickListener(v -> selectPlanDays(30));
+        chipDays60.setOnClickListener(v -> selectPlanDays(60));
+        chipDaysFree.setOnClickListener(v -> selectPlanDays(0));
 
 
          layoutStartVisibility = sharedPreferencesLayout.getInt("LayoutStart", View.GONE);
@@ -334,14 +379,13 @@ public class Khatm extends BaseActivity {
                 --QuranPageUtils.KhatmNumber;
             }
             txtKhatmNUmber.setText("" + QuranPageUtils.KhatmNumber);
-
-            // Update KhatmNumberS before updating UI
             KhatmNumberS = QuranPageUtils.KhatmNumber;
-
             editor.putInt("KhatmNumber", QuranPageUtils.KhatmNumber);
+            editor.putString("khatm_mode", "juz");
+            khatmMode = "juz";
             editor.apply();
-
             updateJuzInfo(currentJuz);
+            applyModeUi();
         });
 
         plusBtn.setOnClickListener(v -> {
@@ -349,14 +393,13 @@ public class Khatm extends BaseActivity {
                 ++QuranPageUtils.KhatmNumber;
             }
             txtKhatmNUmber.setText("" + QuranPageUtils.KhatmNumber);
-
-            // Update KhatmNumberS before updating UI
             KhatmNumberS = QuranPageUtils.KhatmNumber;
-
             editor.putInt("KhatmNumber", QuranPageUtils.KhatmNumber);
+            editor.putString("khatm_mode", "juz");
+            khatmMode = "juz";
             editor.apply();
-
             updateJuzInfo(currentJuz);
+            applyModeUi();
         });
 
         progressBar.setProgress(currentJuz);
@@ -460,6 +503,69 @@ public class Khatm extends BaseActivity {
             QuranPageUtils.pageNumberEnd = endPage;
             startActivity(intent);
         });
+
+        LayoutSettings.postDelayed(() -> {
+            View hero = LayoutSettings.getVisibility() == View.VISIBLE ? LayoutSettings : LayoutStart;
+            View today = LayoutStart.getVisibility() == View.VISIBLE ? LayoutStart : txtStartNow;
+            List<AppCoachTour.Step> steps = new ArrayList<>();
+            steps.add(new AppCoachTour.Step(hero, "خەتمی قورئان",
+                    "لێرەوە خەتم دەست پێ بکە: بە جوزء یان پلانی ڕۆژانە."));
+            steps.add(new AppCoachTour.Step(today, "بەشی ئەمڕۆ",
+                    "«بخوێنەوە» تەنها بەشی دانەی ئێستا دەکاتەوە؛ دوای تەواوبوون «تەواوکرا» لێبدە."));
+            AppCoachTour.maybeShow(Khatm.this, AppCoachTour.KEY_KHATM, steps, false);
+        }, 550);
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void applyModeUi() {
+        boolean juz = !"daily".equals(khatmMode);
+        juzModeSetup.setVisibility(juz ? View.VISIBLE : View.GONE);
+        dailyModeSetup.setVisibility(juz ? View.GONE : View.VISIBLE);
+        btnModeJuz.setBackgroundResource(juz ? R.drawable.btn_yes_bg : R.drawable.backgrownd_btn_taf);
+        btnModeJuz.setTextColor(getResources().getColor(juz ? R.color.textColorWhite : R.color.textColorBlack));
+        btnModeDaily.setBackgroundResource(juz ? R.drawable.backgrownd_btn_taf : R.drawable.btn_yes_bg);
+        btnModeDaily.setTextColor(getResources().getColor(juz ? R.color.textColorBlack : R.color.textColorWhite));
+        if (!juz) {
+            highlightDayChips(planDays);
+            int step = juzPerDayFromPlan(planDays);
+            txtDailyPreview.setText(planDays <= 0
+                    ? "ئازاد · هەر «تەواو» ≈ ١ جزء · پێشکەوتن بە ڕیزی"
+                    : "لە " + planDays + " ڕۆژدا · هەر «تەواو» ≈ " + step + " جزء");
+        }
+    }
+
+    private void selectPlanDays(int days) {
+        planDays = days;
+        int step = juzPerDayFromPlan(days);
+        QuranPageUtils.KhatmNumber = step;
+        KhatmNumberS = step;
+        txtKhatmNUmber.setText(String.valueOf(step));
+        editor.putInt("planDays", days);
+        editor.putInt("KhatmNumber", step);
+        editor.putString("khatm_mode", "daily");
+        editor.apply();
+        highlightDayChips(days);
+        txtDailyPreview.setText(days <= 0
+                ? "ئازاد · هەر «تەواو» ≈ ١ جزء · پێشکەوتن بە ڕیزی"
+                : "لە " + days + " ڕۆژدا · هەر «تەواو» ≈ " + step + " جزء");
+        updateJuzInfo(currentJuz);
+    }
+
+    private void highlightDayChips(int days) {
+        int sel = R.drawable.btn_yes_bg;
+        int un = R.drawable.backgrownd_btn_taf;
+        int cSel = getResources().getColor(R.color.textColorWhite);
+        int cUn = getResources().getColor(R.color.textColorBlack);
+        chipDays7.setBackgroundResource(days == 7 ? sel : un);
+        chipDays7.setTextColor(days == 7 ? cSel : cUn);
+        chipDays15.setBackgroundResource(days == 15 ? sel : un);
+        chipDays15.setTextColor(days == 15 ? cSel : cUn);
+        chipDays30.setBackgroundResource(days == 30 ? sel : un);
+        chipDays30.setTextColor(days == 30 ? cSel : cUn);
+        chipDays60.setBackgroundResource(days == 60 ? sel : un);
+        chipDays60.setTextColor(days == 60 ? cSel : cUn);
+        chipDaysFree.setBackgroundResource(days == 0 ? sel : un);
+        chipDaysFree.setTextColor(days == 0 ? cSel : cUn);
     }
 
 

@@ -35,7 +35,7 @@ public class HelpNoor extends BaseActivity {
 
     ImageView btnBack , fastPayBtn , fibBtn , btnKorek , btnAsia;
     TextView   tvData , tvThree , tvFive , tvTen , tvIncrement , tvDecrement , tvSend , helpTextView;
-    String phoneNumber = "7511935352";
+    String phoneNumber = "07710500202";
     String n = "*123*19000*0770942824#";
     int Three = 3000;
     int Five = 5000;

@@ -121,6 +121,9 @@
             android:name=".activities.AppSettings"
             android:exported="false" />
         <activity
+            android:name=".activities.AyahWidgetSettings"
+            android:exported="false" />
+        <activity
             android:name=".activities.FarmwdaT"
             android:exported="false">
             <meta-data
@@ -258,6 +261,18 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/salat_widget_vertical_info" />
             <!-- naweki bnw w la jei [prayer_widget_info] dai bne. -->
+        </receiver>
+        <receiver
+            android:name=".widget.AyahWidget"
+            android:exported="false"
+            android:label="@string/ayah_widget_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.dya.noor.widget.AYAH_NEXT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/ayah_widget_info" />
         </receiver>
         <receiver
             android:name=".widget.UpdateWidgetReceiver"

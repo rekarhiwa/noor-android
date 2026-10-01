@@ -36,6 +36,7 @@ import com.dya.noor.adapters.SurahAapter;
 import com.dya.noor.database.MydbClass;
 import com.dya.noor.download.DownloadFilesTask;
 import com.dya.noor.module.SurahItem;
+import com.dya.noor.utility.AppCoachTour;
 import com.dya.noor.utlis.QuranPageUtils;
 
 import java.io.File;
@@ -385,6 +386,17 @@ public class Quran extends BaseActivity {
 
         });
 
+        View modes = findViewById(R.id.quranModesLayout);
+        recyclerView.postDelayed(() -> {
+            List<AppCoachTour.Step> steps = new ArrayList<>();
+            steps.add(new AppCoachTour.Step(modes, "جۆری خوێندنەوە",
+                    "تەفسیر، مسحەفی تێکست یان مسحەفی وێنە هەڵبژێرە."));
+            steps.add(new AppCoachTour.Step(searchButton, "گەڕان",
+                    "بۆ سوورەت یان ئایەت بگەڕێ."));
+            steps.add(new AppCoachTour.Step(recyclerView, "لیستی سوورەتەکان",
+                    "سوورەتێک هەڵبژێرە بۆ خوێندنەوە. سەیڤی ئایەتیش لێرە دەردەکەوێت."));
+            AppCoachTour.maybeShow(Quran.this, AppCoachTour.KEY_QURAN, steps, false);
+        }, 550);
 
     }
     void StoreDataInArrayList(){

@@ -47,6 +47,7 @@ import com.dya.noor.database.MydbClass;
 import com.dya.noor.module.AmbienceSound;
 import com.dya.noor.module.QariNameListMP3Item;
 import com.dya.noor.module.QuranSuraLisMP3Item;
+import com.dya.noor.utility.AppCoachTour;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
@@ -57,6 +58,7 @@ import java.io.FileOutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class QuranMP3Activity extends BaseActivity {
@@ -332,6 +334,15 @@ public class QuranMP3Activity extends BaseActivity {
                 downloadMp3AndPlay(mp3File);
             }
         });
+
+        btnPlay.postDelayed(() -> {
+            List<AppCoachTour.Step> steps = new ArrayList<>();
+            steps.add(new AppCoachTour.Step(btnPlay, "لێدان / وەستان",
+                    "دەنگی قورئان لێرەوە دەست پێ بکە یان بوەستێنە."));
+            steps.add(new AppCoachTour.Step(textViewBackground, "دەنگی باکگراوند",
+                    "باران، با، ئاگر و هیتر بۆ کەشێکی ئارام هەڵبژێرە."));
+            AppCoachTour.maybeShow(QuranMP3Activity.this, AppCoachTour.KEY_LISTEN, steps, false);
+        }, 550);
     }
 
     // --- ANIMATION CONTROL HELPER METHOD ---
